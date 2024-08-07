@@ -16,3 +16,19 @@ questionContainers.forEach(container => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const arrow = document.querySelector('.arrow');
+
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent the default action
+
+      // Toggle the dropdown menu
+      dropdownMenu.classList.toggle('show');
+
+      // Toggle the arrow direction
+      arrow.classList.toggle('up');
+    });
+  });
